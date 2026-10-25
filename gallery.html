@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gallery of SunShine A Rehabilitation Center, Alwar: our center, activities, learning and children's progress.">
+<title>Gallery | SunShine A Rehabilitation Center, Alwar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--navy:#0a4a7c;--blue:#0b7bb5;--orange:#f47b35;--ink:#1d2b38;--muted:#5f6f7d;--line:#e6ebf0;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:#fbfbfd;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}button{font:inherit}.container{width:min(1120px,92%);margin:auto}
+h1,h2{font-family:"Baloo 2",Nunito,sans-serif;color:var(--navy);margin:0}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font:700 22px/1 "Baloo 2";color:var(--navy)}
+.brand-mark{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff6dc;font-size:21px}
+.brand small{display:block;font:700 9px Nunito;letter-spacing:1.2px;color:var(--muted);margin-top:3px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:11px 22px;background:var(--orange);color:#fff;font-weight:800;font-size:14px;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(244,123,53,.3)}.btn:active{transform:scale(.97)}
+.btn.ghost{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1.5px #cfe0ec}.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.intro{text-align:center;padding:76px 0 40px;max-width:680px;margin:auto}
+.kicker{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;color:var(--orange)}
+h1{font-size:clamp(38px,6vw,60px);line-height:1.05;font-weight:800;letter-spacing:-.5px;margin:10px 0 14px}
+.intro p{color:var(--muted);font-size:17px;line-height:1.7;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:80px}
+.gi{margin:0;overflow:hidden;border-radius:22px;background:#e9f2f8;aspect-ratio:4/3;cursor:zoom-in;position:relative;border:1px solid var(--line)}
+.gi button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:inherit}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+.gi:hover img,.gi:focus-within img{transform:scale(1.05)}
+.gi:focus-within{outline:3px solid var(--blue);outline-offset:2px}
+.empty{display:none;text-align:center;color:var(--muted);padding:30px 0 90px}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.js .reveal.visible{opacity:1;transform:none}
+.footer{background:#0b2a40;color:#c3d7e4;padding:40px 0 28px;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}.footer strong{color:#fff}.footer a{color:#e6f3fb}.footer a:hover{text-decoration:underline}.footer p{margin:6px 0;line-height:1.6}
+.copy{border-top:1px solid #ffffff1c;margin-top:26px;padding-top:16px;font-size:13px;color:#8fa9bb}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,20,32,.92);display:none;align-items:center;justify-content:center;padding:56px 64px}
+.lb.open{display:flex;animation:fade .25s ease}
+.lb figure{margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lb img{max-width:100%;max-height:calc(100vh - 150px);object-fit:contain;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb figcaption{color:#d6e6f1;font-size:14px;text-align:center}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.14);color:#fff;width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;transition:background .2s}
+.lb button:hover{background:rgba(255,255,255,.28)}
+.lb .x{top:16px;right:16px}.lb .p{left:12px;top:50%;margin-top:-23px}.lb .n{right:12px;top:50%;margin-top:-23px}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid{gap:10px}.gi{border-radius:16px}.footer-grid{grid-template-columns:1fr}.intro{padding:52px 0 28px}.lb{padding:60px 12px}.lb .p,.lb .n{top:auto;bottom:14px;margin:0}.lb .p{left:calc(50% - 56px)}.lb .n{right:calc(50% - 56px)}.nav .btn{padding:9px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+.copy{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}.copy>span{justify-self:start}.copy>.dev{grid-column:2;justify-self:center}.footer{padding-bottom:36px}@media(max-width:700px){.copy{grid-template-columns:1fr;justify-items:center;text-align:center}.copy>span,.copy>.dev{grid-column:1;justify-self:center}.footer{padding-bottom:96px}}.dev{display:inline-flex;align-items:center;gap:10px;color:#c3d7e4}.dev:hover{color:#fff}.dev .logo{background:#fff;border-radius:10px;padding:4px 10px;display:inline-grid}.dev img{height:26px;width:auto;display:block}
+.sun-spin{display:inline-block;animation:spin 12s linear infinite}.brand:hover .sun-spin{animation-duration:3s}@keyframes spin{to{transform:rotate(360deg)}}.dev strong{color:#fff;font-weight:800}
+</style>
+</head>
+<body>
+<header class="nav"><div class="container nav-inner">
+<a class="brand" href="index.html"><span class="brand-mark"><span class="sun-spin">☀️</span></span><span>SunShine<small>A REHABILITATION CENTER</small></span></a>
+<a class="btn ghost" href="index.html">← Back to Home</a>
+</div></header>
+<main class="container">
+<section class="intro reveal"><span class="kicker">Our Gallery</span><h1>Moments at SunShine</h1>
+<p>A look at our center, everyday activities, learning and the progress our children make — one joyful step at a time.</p></section>
+
+<!--
+  HOW TO ADD PHOTOS
+  1. Upload the image into  assets/gallery/  (e.g. gallery-05.jpg)
+  2. Make sure the <img src> below points to that file, and update the alt text.
+  Slots whose image file is missing are hidden automatically (no broken images).
+  Need more than 10? Copy any <figure class="gi reveal">…</figure> block and change the number/path.
+-->
+<section class="grid" id="grid" aria-label="Photo gallery">
+<!-- SLOT 01 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 1"><img src="assets/G1.png" alt="Children taking part in a therapy activity at SunShine" loading="lazy"></button></figure>
+<!-- SLOT 02 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 2"><img src="assets/g4.jpg" alt="Occupational therapy activity at SunShine" loading="lazy"></button></figure>
+<!-- SLOT 03 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 3"><img src="assets/team.png" alt="Play-based learning session" loading="lazy"></button></figure>
+<!-- SLOT 04 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 4"><img src="assets/" alt="Physiotherapy session for a child" loading="lazy"></button></figure>
+<!-- SLOT 05 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 5"><img src="assets/" alt="Special education class at SunShine" loading="lazy"></button></figure>
+<!-- SLOT 06 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 6"><img src="assets/" alt="Speech therapy session" loading="lazy"></button></figure>
+<!-- SLOT 07 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 7"><img src="assets/" alt="Our center at Subhash Nagar, Alwar" loading="lazy"></button></figure>
+<!-- SLOT 08 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 8"><img src="assets/gallery/gallery-08.jpg" alt="Children celebrating a milestone" loading="lazy"></button></figure>
+<!-- SLOT 09 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 9"><img src="assets/gallery/gallery-09.jpg" alt="Cognition therapy activity" loading="lazy"></button></figure>
+<!-- SLOT 10 -->
+<figure class="gi reveal"><button type="button" aria-label="Open photo 10"><img src="assets/gallery/gallery-10.jpg" alt="Therapy room at SunShine" loading="lazy"></button></figure>
+</section>
+<p class="empty" id="empty">Photos are coming soon. Please check back shortly.</p>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><strong>☀️ SunShine A Rehabilitation Center</strong><p>Supporting every child’s growth and potential.</p></div>
+<div><strong>Visit</strong><p>1st Floor, 88, Subhash Nagar,<br>Alwar, Rajasthan 301001</p></div>
+<div><strong>Contact</strong><p><a href="tel:+9178777816834">78777816834</a></p><p><a href="https://wa.me/9178777816834?text=Hello%20SunShine%20Kids%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer">WhatsApp us ↗</a></p><p><a href="index.html">← Back to Home</a></p></div>
+</div><div class="copy"><span>© <span id="year"></span> SunShine Kids. All rights reserved.</span><a class="dev" href="https://geniustechsolutions.in/" target="_blank" rel="noopener noreferrer">Managed &amp; developed by <span class="logo"><img src="assets/logo.png" alt="" onerror="this.parentNode.style.display='none'"></span><strong>Genius Tech Solutions</strong></a></div></div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+<button class="x" id="lbX" aria-label="Close">✕</button><button class="p" id="lbP" aria-label="Previous photo">‹</button><button class="n" id="lbN" aria-label="Next photo">›</button>
+<figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure></div>
+<script>
+const $=s=>document.querySelector(s);
+$('#year').textContent=new Date().getFullYear();
+const grid=$('#grid'),slots=[...grid.querySelectorAll('.gi')];let list=[],cur=0,pending=slots.length;
+
+/* Hide any slot whose image is missing; then enable the lightbox for the rest */
+function settle(){if(--pending>0)return;list=slots.filter(s=>!s.hidden);$('#empty').style.display=list.length?'none':'block';
+ list.forEach((s,i)=>{s.querySelector('button').onclick=()=>open(i);s.style.setProperty('--d',(i%3)*100+'ms')});observe()}
+slots.forEach(s=>{const img=s.querySelector('img');let done=false;
+ const ok=()=>{if(!done){done=true;settle()}},bad=()=>{if(!done){done=true;s.hidden=true;settle()}};
+ img.addEventListener('load',ok);img.addEventListener('error',bad);
+ if(img.complete)(img.naturalWidth?ok:bad)()});
+
+/* Scroll reveal (once) */
+function observe(){const els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('visible'));return}
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+ els.forEach(e=>io.observe(e))}
+
+/* Lightbox */
+const lb=$('#lb'),lbImg=$('#lbImg'),lbCap=$('#lbCap');let opener=null;
+function show(i){cur=(i+list.length)%list.length;const im=list[cur].querySelector('img');lbImg.src=im.currentSrc||im.src;lbImg.alt=im.alt;lbCap.textContent=im.alt+'  ·  '+(cur+1)+' / '+list.length;
+ const multi=list.length>1;$('#lbP').style.display=$('#lbN').style.display=multi?'':'none'}
+function open(i){opener=document.activeElement;show(i);lb.classList.add('open');document.body.style.overflow='hidden';$('#lbX').focus()}
+function close(){lb.classList.remove('open');document.body.style.overflow='';opener&&opener.focus()}
+$('#lbX').onclick=close;$('#lbP').onclick=()=>show(cur-1);$('#lbN').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.tagName==='FIGURE')close()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(cur-1);else if(e.key==='ArrowRight')show(cur+1)});
+let tx=0;lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(cur+(d<0?1:-1))});
+/* Safety net: if scripts for images stall, still reveal the intro */
+setTimeout(()=>{if(pending>0)observe()},2500);
+</script>
+</body></html>
